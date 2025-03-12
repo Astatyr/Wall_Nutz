@@ -1,1 +1,31 @@
-Temporary file
+################################################################
+################# DXF continuous line to gcode #################
+################# Made by Justin Adrian Halim  #################
+################# For 3D Printing Concrete     #################
+################################################################
+##--------------------------------------------------------------------------------------------##
+#Version 1.1: Added nearestpoint function
+#Version 1.2: Added double wall feature
+#Version 1.2.1: Fixed doubled points during pathing
+#Version 1.2.2: Fixed double wall separation bug
+#Version 1.3: Adding tearing movement?
+#Version 2.0: Complete overhaul with Tkinter and RawTurtle
+#Version 2.1: Added RawTurtle speed option, restrict some entries to pseudo - float only, minor code cleaning
+##--------------------------------------------------------------------------------------------##
+Licensed under GNU GPL
+This project is open-source. Feel free to modify the code as long as proper credits are given and strictly no harmful intentions.
+If you have any queries, ideas, or modifications to improve the software, please contact me at justin.halim20@gmail.com
+##--------------------------------------------------------------------------------------------##
+Intended usage:
+Currently, the most common file format used across many 3D printers is GCode. It is relatively simple, clear and easy to understand and use.
+This includes 3D concrete printing, which based on my past experiences, which requires a different slicer from the standard 3D printers. 
+It requires no infill, and current potential industrial use requires only one layer thin walls (especially for buildings). 
+As there are few to none standard way to slice a 3D concrete model into GCode, this app is developed to convert dxf lines (exported from Fusion360) to GCode.
+
+The dxf lines should:
+1. Be continuous, although it is possible to add jumps in future development of the app.
+2. Not contain doubled lines (lines parallel and overlapping on top of each other), as the app currently unable to detect overlaps which may cause issues in the print path
+3. Each points or corners should not be connected to more than 2 segments
+
+It is best to know and input the startpoint of the model to prevent the software from splitting the print path in two
+##--------------------------------------------------------------------------------------------##
